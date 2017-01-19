@@ -17,18 +17,30 @@ public void setup()
 }
 public String reverse(String str)
 {
-    String sNew = new String();
+    String sNew = new String(); 
     for(int i = str.length()-1; i >=0; i--)
     {
-      sNew = sNew + str.charAt(i);
+      if(Character.isLetter(str.charAt(i))==true)  
+      {  
+        sNew = sNew + str.substring(i,i+1);
+      }
     }//your code here
+    sNew.toLowerCase();
     return sNew;
 }
 public boolean palindrome(String word)
 {
   //your code here
-
-  if(reverse(word).equals(word))
+  String pNew = new String();
+  for(int i = 0; i <= word.length()-1; i++)
+  {
+    if(Character.isLetter(word.charAt(i))==true)  
+    {  
+      pNew = pNew + word.substring(i,i+1);
+    }
+  }
+  pNew.toLowerCase();
+  if(reverse(pNew).equals(pNew))
   {
     return true;
   }
