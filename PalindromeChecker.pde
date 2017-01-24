@@ -22,10 +22,9 @@ public String reverse(String str)
     {
       if(Character.isLetter(str.charAt(i))==true)  
       {  
-        sNew = sNew + str.substring(i,i+1);
+        sNew = sNew + str.substring(i,i+1).toLowerCase();
       }
     }//your code here
-    sNew.toLowerCase();
     return sNew;
 }
 public boolean palindrome(String word)
@@ -36,10 +35,9 @@ public boolean palindrome(String word)
   {
     if(Character.isLetter(word.charAt(i))==true)  
     {  
-      pNew = pNew + word.substring(i,i+1);
+      pNew = pNew + word.substring(i,i+1).toLowerCase();
     }
   }
-  pNew.toLowerCase();
   if(reverse(pNew).equals(pNew))
   {
     return true;
