@@ -38,7 +38,7 @@ public boolean palindrome(String word)
       pNew = pNew + word.substring(i,i+1).toLowerCase();
     }
   }
-  if(reverse(pNew).equals(pNew))
+  if(reverse(word).equals(pNew))
   {
     return true;
   }
